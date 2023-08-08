@@ -1,4 +1,4 @@
-AFRAME.registerComponent("markerHandler",{
+AFRAME.registerComponent("markerhandler",{
     init: async function(){
         this.el.addEventListener("markerFound",()=>{
             this.handleMarkerFound()
@@ -10,13 +10,13 @@ AFRAME.registerComponent("markerHandler",{
         })
     },
     handleMarkerFound: function(){
-    var button=document.getElementById("button-div")
-    button.style.display="flex"
+    var buttonDiv=document.getElementById("button-div")
+    buttonDiv.style.display="flex"
     
     var buttonRating=document.getElementById("rating-button")
     var buttonOrder=document.getElementById("order-button")
 
-    buttonRating.addEventListener("click", ()=>{
+    buttonRating.addEventListener("click",function (){
     swal({
         icon:"warning",
         title:"rate dish",
